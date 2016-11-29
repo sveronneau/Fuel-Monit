@@ -1,11 +1,11 @@
-# Fuel-Monitee
+# Fuel-Monit
 #Monitoring of the Fuel node
 This is a quick way of enabling monitoring of the Fuel Master with zero impact on the node functionality in a few minutes using Monit.
 ##Step 1 - Install Monit
-On the Fuel Master
-monit status
-monit: Status not available -- the monit daemon is not running
-This means Monit is installed.  If you get a command not found, just do > yum install monit
+*On the Fuel Master
+**monit status
+**monit: Status not available -- the monit daemon is not running
+***This means Monit is installed.  If you get a command not found, just do > yum install monit
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
 iptables -A INPUT -p tcp -m multiport --dports 2812 -m comment --comment "200 monit_port" -m state --state NEW -j ACCEPT
