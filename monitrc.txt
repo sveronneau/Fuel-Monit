@@ -1,0 +1,21 @@
+#
+set daemon 300 # polling interval in seconds
+set alert joe@doe.com # who's the lucky person who will get the emails
+set httpd port 2812 and
+allow admin:monit # require user 'admin' with password 'monit'
+allow @monit # allow users of group 'monit' to connect (rw)
+allow @users readonly # allow users of group 'users' to connect readonly
+#
+set mailserver mail.bar.baz, # primary mailserver
+backup.bar.baz port 10025, # backup mailserver on port 10025
+localhost # fallback relay
+#
+###############################################################################
+## Includes
+###############################################################################
+##
+## It is possible to include additional configuration parts from other files or
+## directories.
+#
+include /etc/monit.d/*
+#
