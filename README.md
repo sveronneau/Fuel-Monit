@@ -1,5 +1,5 @@
-# Fuel-Monit
-1 Monitoring of the Fuel node
+# Fuel-Monitee
+#Monitoring of the Fuel node
 This is a quick way of enabling monitoring of the Fuel Master with zero impact on the node functionality in a few minutes using Monit.
 1.1 Step 1 - Install Monit
 On the Fuel Master
