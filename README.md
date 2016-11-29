@@ -9,11 +9,11 @@ MONIT : https://mmonit.com/monit/
 ##Step 1 - Install Monit
 On the Fuel Master
 
-*monit status
+1. monit status
 
-*monit: Status not available -- the monit daemon is not running
+2. monit: Status not available -- the monit daemon is not running
 
-*This means Monit is installed.  If you get a command not found, just do > yum install monit
+1. This means Monit is installed.  If you get a command not found, just do > yum install monit
 
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
