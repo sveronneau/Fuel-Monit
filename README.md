@@ -24,7 +24,7 @@ On The Fuel Master
 
 1. mv /etc/monitrc /etc/monitrc-BAK
 2. vi /etc/monitrc 
-3. Paste or use **monitrc** from GitHub the repo and modify SET ALERT, SET MAILSERVER and save the following:
+3. Paste or use **monitrc** from GitHub the repo, modify SET ALERT, SET MAILSERVER and save the following:
 ```
 #
 set daemon 300 # polling interval in seconds
@@ -68,7 +68,7 @@ if space usage > 85% then alert
 #
 ```
 7. vi /etc/monit.d/monit-webserver.conf
-8. Paste or use **monit-webserver.conf** from GitHub repo and modify WITH_ADDRESS and save to following:
+8. Paste or use **monit-webserver.conf** from GitHub repo, modify WITH_ADDRESS and save to following:
 ```
 #
 check host Fuel-WebServer WITH ADDRESS 10.20.0.2
