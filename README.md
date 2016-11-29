@@ -25,7 +25,6 @@ On The Fuel Master
 1. mv /etc/monitrc /etc/monitrc-BAK
 2. vi /etc/monitrc 
 3. Paste and modify SET ALERT, SET MAILSERVER and save the following:
-
 ```
 #
 set daemon 300 # polling interval in seconds
@@ -50,9 +49,10 @@ include /etc/monit.d/*
 #
 ```
 
-mv /etc/monit.d/monit-free-space.conf /etc/monit.d/monit-free-space.conf-BAK
-vi /etc/monit.d/monit-free-space.conf
-Paste and save the following: 
+4. mv /etc/monit.d/monit-free-space.conf /etc/monit.d/monit-free-space.conf-BAK
+5. vi /etc/monit.d/monit-free-space.conf
+6. Paste and save the following: 
+```
 #
 check filesystem os-root with path /
 if space usage > 75% then alert
@@ -66,14 +66,17 @@ if space usage > 75% then alert
 check filesystem boot with path /boot
 if space usage > 85% then alert
 #
-vi /etc/monit.d/monit-webserver.conf
-Paste and modify WITH_ADDRESS and save to following:
+```
+7. vi /etc/monit.d/monit-webserver.conf
+8. Paste and modify WITH_ADDRESS and save to following:
+```
 #
 check host Fuel-WebServer WITH ADDRESS 10.20.0.2
 if failed
 port 80 protocol http
 then alert
 #
+```
 ##Step 4 - Start Monit
 On The Fuel Master
 chmod 700 /etc/monitrc
