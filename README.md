@@ -18,11 +18,16 @@ On the Fuel Master
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
 iptables -A INPUT -p tcp -m multiport --dports 2812 -m comment --comment "200 monit_port" -m state --state NEW -j ACCEPT
+
 iptables-save
+
 ##Step 3 - Configuration
 On The Fuel Master
+
 mv /etc/monitrc /etc/monitrc-BAK
+
 vi /etc/monitrc 
+
 Paste and modify SET ALERT, SET MAILSERVER and save the following:
 #
 set daemon 300 # polling interval in seconds
