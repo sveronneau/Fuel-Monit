@@ -13,7 +13,7 @@ On the Fuel Master
 
 2. monit: Status not available -- the monit daemon is not running
 
-1. This means Monit is installed.  If you get a command not found, just do > yum install monit
+  1. This means Monit is installed.  If you get a command not found, just do > yum install monit
 
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
