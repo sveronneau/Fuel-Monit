@@ -17,6 +17,7 @@ On the Fuel Master
 
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
+
 iptables -A INPUT -p tcp -m multiport --dports 2812 -m comment --comment "200 monit_port" -m state --state NEW -j ACCEPT
 
 iptables-save
