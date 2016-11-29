@@ -30,6 +30,7 @@ mv /etc/monitrc /etc/monitrc-BAK
 vi /etc/monitrc 
 
 Paste and modify SET ALERT, SET MAILSERVER and save the following:
+```
 #
 set daemon 300 # polling interval in seconds
 set alert joe@doe.com # who's the lucky person who will get the emails
@@ -51,6 +52,8 @@ localhost # fallback relay
 #
 include /etc/monit.d/*
 #
+```
+
 mv /etc/monit.d/monit-free-space.conf /etc/monit.d/monit-free-space.conf-BAK
 vi /etc/monit.d/monit-free-space.conf
 Paste and save the following: 
