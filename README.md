@@ -79,10 +79,11 @@ then alert
 ```
 ##Step 4 - Start Monit
 On The Fuel Master
-chmod 700 /etc/monitrc
-monit -t
-Should return: Control file syntax OK
-systemctl enable monit && systemctl start monit
+1. chmod 700 /etc/monitrc
+2. monit -t
+  1. Should return: Control file syntax OK
+3. systemctl enable monit && systemctl start monit
+
 Open your browser at http://fuel-ui-ip:2812
-User : admin
-Password : monit
+1. User : admin
+2. Password : monit
