@@ -79,6 +79,7 @@ then alert
 ```
 ##Step 4 - Start Monit
 On The Fuel Master
+
 1. chmod 700 /etc/monitrc
 2. monit -t
   1. Should return: Control file syntax OK
