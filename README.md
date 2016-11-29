@@ -10,26 +10,22 @@ MONIT : https://mmonit.com/monit/
 On the Fuel Master
 
 1. monit status
-
 2. monit: Status not available -- the monit daemon is not running
-
   1. This means Monit is installed.  If you get a command not found, just do > yum install monit
 
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
 
-iptables -A INPUT -p tcp -m multiport --dports 2812 -m comment --comment "200 monit_port" -m state --state NEW -j ACCEPT
-
-iptables-save
+1. iptables -A INPUT -p tcp -m multiport --dports 2812 -m comment --comment "200 monit_port" -m state --state NEW -j ACCEPT
+2. iptables-save
 
 ##Step 3 - Configuration
 On The Fuel Master
 
-mv /etc/monitrc /etc/monitrc-BAK
+1. mv /etc/monitrc /etc/monitrc-BAK
+2. vi /etc/monitrc 
+3. Paste and modify SET ALERT, SET MAILSERVER and save the following:
 
-vi /etc/monitrc 
-
-Paste and modify SET ALERT, SET MAILSERVER and save the following:
 ```
 #
 set daemon 300 # polling interval in seconds
