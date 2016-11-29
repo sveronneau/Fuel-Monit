@@ -3,6 +3,7 @@
 This is a quick way of enabling monitoring of the Fuel Master with zero impact on the node functionality in a few minutes using Monit.
 
 FUEL : http://docs.openstack.org/developer/fuel-docs/
+
 MONIT : https://mmonit.com/monit/
 
 ##Step 1 - Install Monit
