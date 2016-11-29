@@ -6,8 +6,11 @@ http://docs.openstack.org/developer/fuel-docs/
 On the Fuel Master
 
 *monit status
+
 *monit: Status not available -- the monit daemon is not running
+
 *This means Monit is installed.  If you get a command not found, just do > yum install monit
+
 ##Step 2 - Enable incoming connections 
 On The Fuel Master
 iptables -A INPUT -p tcp -m multiport --dports 2812 -m comment --comment "200 monit_port" -m state --state NEW -j ACCEPT
