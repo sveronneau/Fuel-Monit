@@ -86,5 +86,6 @@ On The Fuel Master
 3. systemctl enable monit && systemctl start monit
 
 Open your browser at http://fuel-ui-ip:2812
+
 1. User : admin
 2. Password : monit
